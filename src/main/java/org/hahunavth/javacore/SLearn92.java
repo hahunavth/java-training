@@ -1,4 +1,4 @@
-package org.hahunavth.s_practice;
+package org.hahunavth.javacore;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -159,7 +159,7 @@ class SupermarketManager {
 }
 
 
-public class Practice92 {
+public class SLearn92 {
     public static void main(String[] args) {
         SupermarketManager manager = new SupermarketManager();
         Scanner scanner = new Scanner(System.in);

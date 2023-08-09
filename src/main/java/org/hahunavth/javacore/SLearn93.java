@@ -1,4 +1,4 @@
-package org.hahunavth.s_practice;
+package org.hahunavth.javacore;
 
 import java.util.*;
 
@@ -189,7 +189,7 @@ class PoliceTransportManagement {
 
 }
 
-public class Practice93 {
+public class SLearn93 {
     public static void main(String[] args) {
         PoliceTransportManagement transportManagement = new PoliceTransportManagement();
 

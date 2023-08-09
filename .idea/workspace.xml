@@ -8,6 +8,7 @@
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/org/hahunavth/s_practice/Practice91.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/org/hahunavth/s_practice/Practice92.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hahunavth/s_practice/Practice93.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -30,6 +31,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -62,11 +66,11 @@
 }]]></component>
   <component name="RunManager" selected="Application.Practice92">
     <configuration name="Practice91" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.hahunavth.s_practice.Practice91" />
+      <option name="MAIN_CLASS_NAME" value="org.hahunavth.javacore.Practice91" />
       <module name="learnjava.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.hahunavth.s_practice.*" />
+          <option name="PATTERN" value="org.hahunavth.javacore.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -75,11 +79,11 @@
       </method>
     </configuration>
     <configuration name="Practice92" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.hahunavth.s_practice.Practice92" />
+      <option name="MAIN_CLASS_NAME" value="org.hahunavth.javacore.Practice92" />
       <module name="learnjava.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.hahunavth.s_practice.*" />
+          <option name="PATTERN" value="org.hahunavth.javacore.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,7 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1691548692245</updated>
       <workItem from="1691548693192" duration="1049000" />
-      <workItem from="1691549752880" duration="855000" />
+      <workItem from="1691549752880" duration="1268000" />
     </task>
     <servers />
   </component>

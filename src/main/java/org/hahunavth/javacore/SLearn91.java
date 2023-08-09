@@ -1,6 +1,6 @@
-package org.hahunavth.s_practice;
+package org.hahunavth.javacore;
 
-public class Practice91 {
+public class SLearn91 {
     public static void main(String args[]) {
         Shape s = new Shape(1, 2.1);
         Rectangle r = new Rectangle(1.2, 2.3);
