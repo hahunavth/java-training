@@ -1,0 +1,94 @@
+plugins {
+    id 'java'
+    id 'war'
+//    id 'org.jetbrains.kotlin.jvm' version '1.5.21'
+}
+
+group 'org.hahunavth'
+version '1.0-SNAPSHOT'
+
+description ''
+
+ext {
+    hibernateVersion = '5.4.3.Final'
+    springVersion = '5.1.7.RELEASE'
+    thymeleafVersion = '3.0.11.RELEASE'
+    layoutDialectVersion = '2.4.1'
+    log4jVersion = '1.2.17'
+    aspectjVersion = '1.6.10'
+    dbcpVersion = '1.4'
+    servletApiVersion = '3.1.0'
+    mysqlConnectorVersion = '8.0.11'
+    lombokVersion = '1.18.22'
+    validationApiVersion = '2.0.1.Final'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+//    implementation kotlin('stdlib')
+    implementation 'junit:junit:4.11'
+
+    // Hibernate
+    implementation "org.hibernate:hibernate-core:$hibernateVersion"
+
+    // Spring MVC Dependencies
+    implementation "org.springframework:spring-webmvc:$springVersion"
+    implementation "org.springframework:spring-web:$springVersion"
+
+    // Spring
+    implementation "org.springframework:spring-core:$springVersion"
+    implementation "org.springframework:spring-orm:$springVersion"
+    implementation "org.springframework:spring-context:$springVersion"
+    implementation "org.springframework:spring-aspects:$springVersion"
+    implementation "org.springframework:spring-context-support:$springVersion"
+    implementation "org.springframework.security:spring-security-core:$springVersion"
+    implementation "org.springframework.security:spring-security-web:$springVersion"
+    implementation "org.springframework.security:spring-security-config:$springVersion"
+
+    // Database Pool
+    implementation "commons-dbcp:commons-dbcp:$dbcpVersion"
+
+    // Mysql Connector
+    implementation "mysql:mysql-connector-java:$mysqlConnectorVersion"
+
+    // commons-lang3
+    implementation "org.apache.commons:commons-lang3:3.5"
+
+    // AspectJ
+    implementation "org.aspectj:aspectjrt:$aspectjVersion"
+
+    // Servlet Dependency
+    implementation "javax.servlet:javax.servlet-api:$servletApiVersion"
+
+    // Thymeleaf
+    implementation "org.thymeleaf:thymeleaf:$thymeleafVersion"
+    implementation "org.thymeleaf:thymeleaf-spring5:$thymeleafVersion"
+    implementation "nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:$layoutDialectVersion"
+
+    // Log4j
+    implementation "log4j:log4j:$log4jVersion"
+    implementation "commons-logging:commons-logging:1.2"
+
+    // Lombok
+    implementation "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+    // Validation API
+    implementation "javax.validation:validation-api:$validationApiVersion"
+
+    testImplementation platform("org.junit:junit-bom:5.9.1")
+    testImplementation "org.junit.jupiter:junit-jupiter"
+}
+
+tasks {
+    test {
+        useJUnitPlatform()
+    }
+
+//    named(JavaCompile, 'compileJava') {
+//        options.encoding = 'UTF-8'
+//    }
+}
