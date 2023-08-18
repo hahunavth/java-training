@@ -1,4 +1,4 @@
-package org.hahunavth.javacore;
+package org.hahunavth.javacore.practice;
 
 public class SLearn91 {
     public static void main(String args[]) {

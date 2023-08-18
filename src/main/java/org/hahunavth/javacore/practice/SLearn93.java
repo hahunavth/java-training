@@ -1,4 +1,4 @@
-package org.hahunavth.javacore;
+package org.hahunavth.javacore.practice;
 
 import java.util.*;
 
