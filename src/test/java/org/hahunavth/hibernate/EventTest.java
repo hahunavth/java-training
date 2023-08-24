@@ -1,6 +1,8 @@
 package org.hahunavth.hibernate;
 
+import org.hahunavth.hibernate.entities.Account;
 import org.hahunavth.hibernate.entities.Event;
+import org.hibernate.Session;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -16,17 +18,13 @@ class EventTest {
         sessionFactory = Persistence.createEntityManagerFactory( "org.hibernate.tutorial.jpa" );
     }
 
-        @org.junit.jupiter.api.Test
-        void getId() {
-            EntityManager entityManager = sessionFactory.createEntityManager();
-            entityManager.getTransaction().begin();
-            entityManager.persist( new Event( "Our very first event!", new Date() ) );
-            entityManager.persist( new Event( "A follow up event", new Date() ) );
-            entityManager.getTransaction().commit();
-            entityManager.close();
-        }
-
-        @org.junit.jupiter.api.Test
-        void getDate() {
-        }
+    @org.junit.jupiter.api.Test
+    void getId() {
+        EntityManager entityManager = sessionFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.persist( new Event( "Our very first event!", new Date() ) );
+        entityManager.persist( new Event( "A follow up event", new Date() ) );
+        entityManager.getTransaction().commit();
+        entityManager.close();
+    }
 }
