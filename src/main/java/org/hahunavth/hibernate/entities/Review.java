@@ -19,6 +19,17 @@ public class Review implements java.io.Serializable {
         this.rating = rating;
     }
 
+    public Review(Account account, String content, Integer rating) {
+        this.account = account;
+        this.content = content;
+        this.rating = rating;
+    }
+
+    public Review(String content, Integer rating) {
+        this.content = content;
+        this.rating = rating;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

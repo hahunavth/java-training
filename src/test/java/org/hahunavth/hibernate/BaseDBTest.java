@@ -1,12 +1,19 @@
 package org.hahunavth.hibernate;
 
 import org.hahunavth.hibernate.entities.Account;
+import org.hahunavth.hibernate.entities.Category;
 import org.hahunavth.hibernate.entities.Review;
+import org.hahunavth.hibernate.entities.Tour;
 import org.hahunavth.hibernate.utils.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-public class HibernateTest {
+import java.util.ArrayList;
+
+/**
+ * Setup database for testing
+ */
+public class BaseDBTest {
     private SessionFactory sessionFactory;
 
     @org.junit.jupiter.api.BeforeEach
@@ -25,15 +32,14 @@ public class HibernateTest {
         accId = (Integer) session.save(new Account("vuthanhha@gmail.com", "123456"));
         accId = (Integer) session.save(new Account("aaaaaaaaa@gmail.com", "123456"));
 
+        Category category = new Category("Category 1");
+        session.save(category);
+        Tour tour = new Tour("Tour 1", "Tour 1", new ArrayList<>(), null);
 
         session.getTransaction().commit();
     }
 
-    @org.junit.jupiter.api.Test
-    void example() {
-        Session session = sessionFactory.openSession();
-
-        Account acc = session.get(Account.class, 1);
-        System.out.println(acc);
+    public SessionFactory getSessionFactory() {
+        return sessionFactory;
     }
 }

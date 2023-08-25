@@ -1,6 +1,8 @@
 package org.hahunavth.hibernate.entities;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.hahunavth.hibernate.entities.account.EmailAuthType;
 import org.hahunavth.hibernate.entities.account.Gender;
 import org.hahunavth.hibernate.entities.account.Role;
@@ -16,17 +18,25 @@ import java.util.List;
 
 /**
  * @Author: Hahunavth
- * @Date: 2023/8/18
  * @Description: Database table: accounts
  * <ul>
  *     <li>id: INT(11) NOT NULL AUTO_INCREMENT</li>
  *     <li>email: VARCHAR(320) NOT NULL</li>
  *     <li>phone_number: VARCHAR(12) DEFAULT ''</li>
  *     <li>full_name: VARCHAR(64) DEFAULT ''</li>
- *     <li>gender: ENUM(
+ *     <li>gender: ENUM(...
+ * </ul>
+ * <br>
+ * Annotation:
+ * <ul>
+ *     <li>
+ *      `@Data`: (do not use this, use @Getter @Setter instead) Lombok annotation, generate getter, setter, toString, equals, hashCode
+ *      It add toString method can cause a circular dependency problem.
+ *      </li>
  * </ul>
  */
-@Data
+@Getter
+@Setter
 @Entity
 @Table( name = "accounts" )
 public class Account implements java.io.Serializable {
@@ -116,14 +126,33 @@ public class Account implements java.io.Serializable {
     @Column(name = "password", length = 64)
     private String password;
 
+    /**
+     * Timestamps
+     * @apiNote
+     * Starting from Hibernate 6.0.0, we can optionally specify the database as the source of the date
+     * <br>
+     * <code>
+     *      @CreationTimestamp(source = SourceType.DB)
+     *      private Instant createdOn;
+     * </code>
+     * @see <a href="https://www.baeldung.com/hibernate-creationtimestamp-updatetimestamp">
+     *     hibernate-creationtimestamp-updatetimestamp
+     *     </a>
+     */
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
     private Timestamp createdAt;
-
     @UpdateTimestamp
-    @Column(name = "updated_at")
     private Timestamp updatedAt;
 
+    /**
+     * Association
+     * <br>
+     * Bidirectional OneToMany
+     * <br>
+     * @see <a href="https://www.baeldung.com/jpa-hibernate-associations">jpa-hibernate-associations</a>
+     * @see <a href="https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/one-to-many-bidirectional-join-table.html">one-to-many-bidirectional-join-table</a>
+     */
     @OneToMany(mappedBy = "account")
     private List<Review> reviews;
 }

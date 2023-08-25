@@ -1,8 +1,7 @@
 package org.hahunavth.hibernate.utils;
 
-import org.hahunavth.hibernate.entities.Account;
-import org.hahunavth.hibernate.entities.Event;
-import org.hahunavth.hibernate.entities.Review;
+import org.hahunavth.hibernate.entities.*;
+import org.hahunavth.hibernate.strategies.SQLPhysicalNamingStrategy;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -12,11 +11,14 @@ public class HibernateUtil {
         SessionFactory sessionFactory = null;
         try {
             Configuration configuration = new Configuration();
+            configuration.setPhysicalNamingStrategy(new SQLPhysicalNamingStrategy());
             sessionFactory = configuration
                     .configure()
                     .addAnnotatedClass(Event.class)
                     .addAnnotatedClass(Account.class)
                     .addAnnotatedClass(Review.class)
+                    .addAnnotatedClass(Tour.class)
+                    .addAnnotatedClass(Category.class)
                     .buildSessionFactory();
         } catch (Throwable e) {
             e.printStackTrace();
@@ -24,6 +26,9 @@ public class HibernateUtil {
         return sessionFactory;
     }
 
+    /**
+     * Try to create a session and save an account
+     */
     public static void main(String [] args) {
         SessionFactory sessionFactory = getSessionFactory();
 

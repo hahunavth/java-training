@@ -1,8 +1,6 @@
 package org.hahunavth.hibernate;
 
-import org.hahunavth.hibernate.entities.Account;
 import org.hahunavth.hibernate.entities.Event;
-import org.hibernate.Session;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -10,7 +8,7 @@ import javax.persistence.Persistence;
 
 import java.util.Date;
 
-class EventTest {
+class RepositoryTest {
     private EntityManagerFactory sessionFactory;
 
     @org.junit.jupiter.api.BeforeEach
