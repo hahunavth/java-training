@@ -3,6 +3,7 @@ package org.hahunavth.hibernate.entities;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.hahunavth.hibernate.entities.account.EmailAuthType;
 import org.hahunavth.hibernate.entities.account.Gender;
 import org.hahunavth.hibernate.entities.account.Role;
@@ -37,6 +38,7 @@ import java.util.List;
  */
 @Getter
 @Setter
+@ToString(exclude = {"reviews"})
 @Entity
 @Table( name = "accounts" )
 public class Account implements java.io.Serializable {

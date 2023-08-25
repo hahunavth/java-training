@@ -5,24 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03ebabe3-49b4-4e90-9efa-f26bf98e6d54" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hahunavth/hibernate/entities/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hahunavth/hibernate/entities/Tour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hahunavth/hibernate/strategies/SQLPhysicalNamingStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hahunavth/hibernate/utils/HashMapConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/hahunavth/hibernate/BaseDBTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/hahunavth/hibernate/NativeQueryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/hahunavth/hibernate/PersistenceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0edc04ff-0cbc-41ec-9605-51bc12d5216a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0edc04ff-0cbc-41ec-9605-51bc12d5216a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0edc04ff-0cbc-41ec-9605-51bc12d5216a/storage_v2/_src_/schema/hibernate_demo.sIGXyg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0edc04ff-0cbc-41ec-9605-51bc12d5216a/storage_v2/_src_/schema/hibernate_demo.sIGXyg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/hahunavth/hibernate/CriteriaQueryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/hahunavth/hibernate/HQLTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/hahunavth/hibernate/TransactionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hahunavth/hibernate/entities/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hahunavth/hibernate/entities/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hahunavth/hibernate/entities/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hahunavth/hibernate/entities/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hahunavth/hibernate/utils/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hahunavth/hibernate/utils/HibernateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/hahunavth/hibernate/EventTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/hahunavth/hibernate/RepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/hahunavth/hibernate/HibernateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/hahunavth/hibernate/ConnectionTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,8 +104,8 @@
       <recent name="org.hahunavth.hibernate" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.PersistenceTest">
-    <configuration name="PersistenceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.TransactionTest.testTransaction">
+    <configuration name="CriteriaQueryTest.testAggregate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -131,7 +118,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.hahunavth.hibernate.PersistenceTest&quot;" />
+            <option value="&quot;org.hahunavth.hibernate.CriteriaQueryTest.testAggregate&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -142,7 +129,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="PersistenceTest.g2ivenDetachedPost_whenTryingToPersist_thenThrowException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CriteriaQueryTest.testCriteriaQuery" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -155,7 +142,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.hahunavth.hibernate.PersistenceTest.g2ivenDetachedPost_whenTryingToPersist_thenThrowException&quot;" />
+            <option value="&quot;org.hahunavth.hibernate.CriteriaQueryTest.testCriteriaQuery&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -166,7 +153,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="PersistenceTest.givenDetachedPost_whenMergeAndPersistComment_thenNoExceptionIsThrown" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CriteriaQueryTest.testCriteriaQuery2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -179,7 +166,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.hahunavth.hibernate.PersistenceTest.givenDetachedPost_whenMergeAndPersistComment_thenNoExceptionIsThrown&quot;" />
+            <option value="&quot;org.hahunavth.hibernate.CriteriaQueryTest.testCriteriaQuery2&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -190,7 +177,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="PersistenceTest.givenDetachedPost_whenTryingToMerge_thenNoExceptionIsThrown" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="HQLTest.testSelect" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -203,7 +190,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.hahunavth.hibernate.PersistenceTest.givenDetachedPost_whenTryingToMerge_thenNoExceptionIsThrown&quot;" />
+            <option value="&quot;org.hahunavth.hibernate.HQLTest.testSelect&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -214,7 +201,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="PersistenceTest.givenDetachedPost_whenTryingToPersist_thenThrowException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TransactionTest.testTransaction" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -227,7 +214,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.hahunavth.hibernate.PersistenceTest.givenDetachedPost_whenTryingToPersist_thenThrowException&quot;" />
+            <option value="&quot;org.hahunavth.hibernate.TransactionTest.testTransaction&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -240,11 +227,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.PersistenceTest" />
-        <item itemvalue="Gradle.PersistenceTest.givenDetachedPost_whenMergeAndPersistComment_thenNoExceptionIsThrown" />
-        <item itemvalue="Gradle.PersistenceTest.givenDetachedPost_whenTryingToMerge_thenNoExceptionIsThrown" />
-        <item itemvalue="Gradle.PersistenceTest.g2ivenDetachedPost_whenTryingToPersist_thenThrowException" />
-        <item itemvalue="Gradle.PersistenceTest.givenDetachedPost_whenTryingToPersist_thenThrowException" />
+        <item itemvalue="Gradle.TransactionTest.testTransaction" />
+        <item itemvalue="Gradle.CriteriaQueryTest.testAggregate" />
+        <item itemvalue="Gradle.CriteriaQueryTest.testCriteriaQuery2" />
+        <item itemvalue="Gradle.CriteriaQueryTest.testCriteriaQuery" />
+        <item itemvalue="Gradle.HQLTest.testSelect" />
       </list>
     </recent_temporary>
   </component>
@@ -266,7 +253,8 @@
       <workItem from="1692348006790" duration="4137000" />
       <workItem from="1692691040609" duration="3446000" />
       <workItem from="1692859922186" duration="5454000" />
-      <workItem from="1692925704616" duration="8604000" />
+      <workItem from="1692925704616" duration="8805000" />
+      <workItem from="1692947249084" duration="5808000" />
     </task>
     <servers />
   </component>
