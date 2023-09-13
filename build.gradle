@@ -4,7 +4,7 @@ plugins {
 //    id 'org.jetbrains.kotlin.jvm' version '1.5.21'
 }
 
-group 'org.hahunavth'
+group 'org.hahunavth.springmvc2'
 version '1.0-SNAPSHOT'
 
 description ''
@@ -28,7 +28,7 @@ repositories {
 }
 
 dependencies {
-//    implementation kotlin('stdlib')
+    // implementation kotlin('stdlib')
     implementation 'junit:junit:4.11'
 
     // Hibernate
@@ -47,6 +47,12 @@ dependencies {
     implementation "org.springframework.security:spring-security-core:$springVersion"
     implementation "org.springframework.security:spring-security-web:$springVersion"
     implementation "org.springframework.security:spring-security-config:$springVersion"
+    // spring mvc
+    implementation "org.springframework:spring-tx:$springVersion"
+    implementation "org.springframework:spring-webmvc:$springVersion"
+    // https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa
+    implementation 'org.springframework.data:spring-data-jpa:2.7.15'
+
 
     // Database Pool
     implementation "commons-dbcp:commons-dbcp:$dbcpVersion"
@@ -94,4 +100,11 @@ tasks {
 //    named(JavaCompile, 'compileJava') {
 //        options.encoding = 'UTF-8'
 //    }
+}
+
+war {
+    webAppDirectory = file('src/main/java/org/hahunavth/springmvc2')
+    // baseName = 'springmvc2'
+    webInf { from 'src/main/resource/springmvc2' }
+    version = '1.0.0-BUILD-SNAPSHOT'
 }
